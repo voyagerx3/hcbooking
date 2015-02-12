@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="HCBooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="HCBooking" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="I1i-be-6Mx">
+                                <rect key="frame" x="148" y="3" width="304" height="17"/>
+                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ney-CI-G5Q">
+                                <rect key="frame" x="8" y="28" width="585" height="515"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99W-71-j8y">
+                                        <rect key="frame" x="226" y="122" width="132" height="30"/>
+                                        <color key="backgroundColor" red="0.18823529410000001" green="0.2784313725" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <state key="normal" title="Login FaceBook">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="BtnLoginFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6u-yT-blr"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="EMAIL" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKI-at-Er1">
+                                        <rect key="frame" x="226" y="236" width="132" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PASSWORD" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nv0-xM-u4U">
+                                        <rect key="frame" x="226" y="274" width="132" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aL-TN-PSn">
+                                        <rect key="frame" x="226" y="312" width="132" height="30"/>
+                                        <color key="backgroundColor" red="0.51372549020000002" green="0.16862745100000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="BtnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6LT-rM-5v9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="HCBooking" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TdI-oo-vHU">
+                                        <rect key="frame" x="140" y="350" width="304" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" size="system"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkB-ge-2xM">
+                                <rect key="frame" x="234" y="562" width="132" height="30"/>
+                                <color key="backgroundColor" red="0.51372549020000002" green="0.16862745100000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="Date de Alta">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnDateAlta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELY-cr-v2c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.90588235289999997" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="LblError" destination="TdI-oo-vHU" id="Pnf-MS-daC"/>
+                        <outlet property="TxtEmail" destination="KKI-at-Er1" id="Ga4-cM-zhh"/>
+                        <outlet property="TxtPassword" destination="nv0-xM-u4U" id="T8x-Up-sp9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="jwf-rc-6U2">
+            <objects>
+                <viewController storyboardIdentifier="VCMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MVn-eH-t9d" customClass="VCMenu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4AT-su-dUS"/>
+                        <viewControllerLayoutGuide type="bottom" id="pyo-B6-Lhb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q5s-UQ-vm5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w1T-kb-hc5">
+                                <rect key="frame" x="8" y="42" width="585" height="515"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7o-HM-ZzS">
+                                        <rect key="frame" x="226" y="312" width="132" height="30"/>
+                                        <color key="backgroundColor" red="0.51372549020000002" green="0.16862745100000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <state key="normal" title="Solicitar Cita">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCS-kJ-Ozm">
+                                        <rect key="frame" x="226" y="350" width="132" height="30"/>
+                                        <color key="backgroundColor" red="0.51372549020000002" green="0.16862745100000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <state key="normal" title="Cambiar Cita">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxU-mg-wl5">
+                                        <rect key="frame" x="226" y="390" width="132" height="30"/>
+                                        <color key="backgroundColor" red="0.51372549020000002" green="0.16862745100000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <state key="normal" title="Consultar Cita">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2x-d1-UfF">
+                                        <rect key="frame" x="226" y="428" width="132" height="30"/>
+                                        <color key="backgroundColor" red="0.51372549020000002" green="0.16862745100000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <state key="normal" title="Cancelar Cita">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTb-MV-Fcq">
+                                        <rect key="frame" x="172" y="155" width="240" height="128"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bienvenido PEPE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yID-53-z8B">
+                                        <rect key="frame" x="226" y="104" width="134" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.8901960784313725" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upn-AD-Asy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="446"/>
+        </scene>
+    </scenes>
+</document>
