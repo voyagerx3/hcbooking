@@ -34,10 +34,8 @@ class ViewController: UIViewController {
     @IBAction func BtnLogin(sender: AnyObject) {
         if TxtPassword?.text=="1234"
         {
-            //let nuevovc=self.storyboard?.instantiateViewControllerWithIdentifier("VCmenu") as UIViewController
-            
-            let viewController:UIViewController = UIStoryboard(name: "VCmenu", bundle: nil).instantiateViewControllerWithIdentifier("ViewController") as UIViewController
-            self.presentViewController(viewController, animated: true, completion: nil)
+            let nuevovc=self.storyboard?.instantiateViewControllerWithIdentifier("VCMenu") as VCMenu
+            self.presentViewController(nuevovc, animated: true, completion: nil)
         }
         else
         {
