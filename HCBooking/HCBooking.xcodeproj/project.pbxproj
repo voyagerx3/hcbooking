@@ -15,7 +15,6 @@
 		0CA7E5CF1A8CF9E100381307 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA7E5CD1A8CF9E100381307 /* LaunchScreen.xib */; };
 		0CA7E5DB1A8CF9E100381307 /* HCBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7E5DA1A8CF9E100381307 /* HCBookingTests.swift */; };
 		0CA7E5E51A8CFB3B00381307 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA7E5E41A8CFB3B00381307 /* MapKit.framework */; };
-		0CA7E5E71A8CFC9200381307 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA7E5E61A8CFC9200381307 /* FacebookSDK.framework */; };
 		0CEA52261A92943700DC6F9B /* VCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA52251A92943700DC6F9B /* VCMenu.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CA7E5E71A8CFC9200381307 /* FacebookSDK.framework in Frameworks */,
 				0CA7E5E51A8CFB3B00381307 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
