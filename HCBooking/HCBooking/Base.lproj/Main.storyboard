@@ -66,6 +66,7 @@
                                         </state>
                                         <connections>
                                             <action selector="BtnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6LT-rM-5v9"/>
+                                            <segue destination="MHA-Bk-wnv" kind="show" identifier="pr" id="Tkq-qP-ytP"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="HCBooking" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TdI-oo-vHU">
@@ -90,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="383" y="322"/>
         </scene>
-        <!--Menu-->
+        <!--Menú-->
         <scene sceneID="jwf-rc-6U2">
             <objects>
                 <viewController storyboardIdentifier="VCMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MVn-eH-t9d" customClass="VCMenu" sceneMemberID="viewController">
@@ -112,6 +113,9 @@
                                         <state key="normal" title="Solicitar Cita">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="k8f-zg-h8s" kind="show" identifier="showNuevaCitaViewController" id="UrL-Ed-qwS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCS-kJ-Ozm">
                                         <rect key="frame" x="226" y="350" width="132" height="30"/>
@@ -138,7 +142,10 @@
                                         </state>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTb-MV-Fcq">
-                                        <rect key="frame" x="172" y="155" width="240" height="128"/>
+                                        <rect key="frame" x="172" y="141" width="240" height="128"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="172" y="133" width="240" height="128"/>
+                                        </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bienvenido PEPE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yID-53-z8B">
                                         <rect key="frame" x="226" y="104" width="134" height="21"/>
@@ -158,10 +165,66 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.8901960784313725" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Menú" id="ll0-sA-Ndl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upn-AD-Asy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1817" y="322"/>
+        </scene>
+        <!--Nueva cita-->
+        <scene sceneID="73q-VF-bml">
+            <objects>
+                <viewController id="K3q-rO-c2W" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n8Z-j8-uJP"/>
+                        <viewControllerLayoutGuide type="bottom" id="QPf-Tm-eGf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5y4-PT-6uO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nueva cita" id="91p-0E-ADi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxQ-rZ-nkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3642" y="382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tN2-po-ieo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MHA-Bk-wnv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vZW-y4-dIC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MVn-eH-t9d" kind="relationship" relationship="rootViewController" id="P43-5d-d0D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEQ-hj-Zdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="1005" y="322"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rYX-Sz-JWl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k8f-zg-h8s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9LY-Na-lnT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="K3q-rO-c2W" kind="relationship" relationship="rootViewController" id="eeF-6n-NIq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbS-kr-YDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2830" y="382"/>
         </scene>
     </scenes>
 </document>
