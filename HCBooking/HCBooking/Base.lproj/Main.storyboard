@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -89,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="383" y="322"/>
+            <point key="canvasLocation" x="1203" y="-566"/>
         </scene>
         <!--Menú-->
         <scene sceneID="jwf-rc-6U2">
@@ -169,12 +170,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upn-AD-Asy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1817" y="322"/>
+            <point key="canvasLocation" x="1057" y="566"/>
         </scene>
         <!--Nueva cita-->
         <scene sceneID="73q-VF-bml">
             <objects>
-                <viewController id="K3q-rO-c2W" sceneMemberID="viewController">
+                <viewController id="K3q-rO-c2W" customClass="NuevaCitaViewController" customModule="HCBooking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n8Z-j8-uJP"/>
                         <viewControllerLayoutGuide type="bottom" id="QPf-Tm-eGf"/>
@@ -182,13 +183,25 @@
                     <view key="view" contentMode="scaleToFill" id="5y4-PT-6uO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Xt-Ah-SEz">
+                                <rect key="frame" x="16" y="81" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="446075463.95612597">
+                                    <!--2015-02-19 21:51:03 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Xt-Ah-SEz" firstAttribute="leading" secondItem="5y4-PT-6uO" secondAttribute="leadingMargin" id="Jdc-nA-td2"/>
+                            <constraint firstItem="9Xt-Ah-SEz" firstAttribute="top" secondItem="n8Z-j8-uJP" secondAttribute="bottom" constant="17" id="XzD-hu-dlB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nueva cita" id="91p-0E-ADi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxQ-rZ-nkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3642" y="382"/>
+            <point key="canvasLocation" x="642" y="1658"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tN2-po-ieo">
@@ -206,7 +219,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEQ-hj-Zdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1005" y="322"/>
+            <point key="canvasLocation" x="277" y="310"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rYX-Sz-JWl">
@@ -224,7 +237,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbS-kr-YDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2830" y="382"/>
+            <point key="canvasLocation" x="-86" y="1446"/>
         </scene>
     </scenes>
 </document>
