@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -190,14 +191,67 @@
                                     <!--2015-02-19 21:51:03 +0000-->
                                 </date>
                             </datePicker>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWR-zb-ubK">
+                                <rect key="frame" x="16" y="251" width="568" height="341"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-hs-U2H">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="341"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0h-QD-2Te">
+                                <rect key="frame" x="16" y="251" width="320" height="329"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EPJ-T0-zCm">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="329"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="EPJ-T0-zCm"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ugl-Bc-iuX">
+                                <rect key="frame" x="16" y="251" width="320" height="322"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QPf-Tm-eGf" firstAttribute="top" secondItem="YWR-zb-ubK" secondAttribute="bottom" constant="8" id="1UM-ay-Fgk"/>
+                            <constraint firstItem="YWR-zb-ubK" firstAttribute="top" secondItem="9Xt-Ah-SEz" secondAttribute="bottom" constant="8" id="1aG-T3-Nez"/>
+                            <constraint firstItem="Y0h-QD-2Te" firstAttribute="leading" secondItem="5y4-PT-6uO" secondAttribute="leadingMargin" id="AVn-Hm-y7V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y0h-QD-2Te" secondAttribute="trailing" constant="248" id="FWx-aW-oyP"/>
                             <constraint firstItem="9Xt-Ah-SEz" firstAttribute="leading" secondItem="5y4-PT-6uO" secondAttribute="leadingMargin" id="Jdc-nA-td2"/>
                             <constraint firstItem="9Xt-Ah-SEz" firstAttribute="top" secondItem="n8Z-j8-uJP" secondAttribute="bottom" constant="17" id="XzD-hu-dlB"/>
+                            <constraint firstItem="YWR-zb-ubK" firstAttribute="leading" secondItem="5y4-PT-6uO" secondAttribute="leadingMargin" id="ZZg-U8-Jqd"/>
+                            <constraint firstItem="QPf-Tm-eGf" firstAttribute="top" secondItem="Y0h-QD-2Te" secondAttribute="bottom" constant="20" id="iet-Po-c5q"/>
+                            <constraint firstItem="Y0h-QD-2Te" firstAttribute="top" secondItem="9Xt-Ah-SEz" secondAttribute="bottom" constant="8" id="lPE-Z7-jyO"/>
+                            <constraint firstItem="YWR-zb-ubK" firstAttribute="trailing" secondItem="5y4-PT-6uO" secondAttribute="trailingMargin" id="opH-6I-wi4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Y0h-QD-2Te"/>
+                                <exclude reference="ugl-Bc-iuX"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="iet-Po-c5q"/>
+                                <exclude reference="AVn-Hm-y7V"/>
+                                <exclude reference="FWx-aW-oyP"/>
+                                <exclude reference="lPE-Z7-jyO"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Nueva cita" id="91p-0E-ADi"/>
+                    <navigationItem key="navigationItem" title="Nueva cita" id="91p-0E-ADi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="h9B-Lm-QqG">
+                            <connections>
+                                <action selector="BT_Done_Click:" destination="K3q-rO-c2W" id="zgF-pZ-xbJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxQ-rZ-nkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -22,6 +22,10 @@ class NuevaCitaViewController: UIViewController {
     }
     
 
+    @IBAction func BT_Done_Click(sender: AnyObject) {
+    }
+ 
+    
     /*
     // MARK: - Navigation
 
