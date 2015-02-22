@@ -10,10 +10,16 @@ import UIKit
 
 class NuevaCitaViewController: UIViewController {
 
+    @IBOutlet weak var datPickDateAppoinment: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Establezco la hora actual, para que no me coja como hora las 10:07
+        var dtDate = NSDate()
+        
+        dtDate = GetExcactCurrentDate(dtDate)
+        datPickDateAppoinment.date = dtDate
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,8 +27,19 @@ class NuevaCitaViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // Al hacer click en OK guardamos la nueva cita en la base de datos
     @IBAction func BT_Done_Click(sender: AnyObject) {
+        var myAppoinment = Appoinment()
+        let dateFormatter = NSDateFormatter()
+        let theDateFormat = NSDateFormatterStyle.ShortStyle
+        let theTimeFormat = NSDateFormatterStyle.ShortStyle
+        var strDate = String()
+        
+        dateFormatter.dateStyle = theDateFormat
+        dateFormatter.timeStyle = theTimeFormat
+        
+        strDate = dateFormatter.stringFromDate(datPickDateAppoinment.date)
+        println("\(strDate)")
     }
  
     

@@ -190,6 +190,7 @@
                                 <date key="date" timeIntervalSinceReferenceDate="446075463.95612597">
                                     <!--2015-02-19 21:51:03 +0000-->
                                 </date>
+                                <locale key="locale" localeIdentifier="es"/>
                             </datePicker>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWR-zb-ubK">
                                 <rect key="frame" x="16" y="251" width="568" height="341"/>
@@ -252,6 +253,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datPickDateAppoinment" destination="9Xt-Ah-SEz" id="oq0-y3-u1J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxQ-rZ-nkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
