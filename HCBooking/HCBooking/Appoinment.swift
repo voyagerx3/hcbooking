@@ -73,4 +73,40 @@ class Appoinment {
         // TODO: Por implementar
         return true
     }
+    
+    // Devuelve un array con las citas de un rango de fechas
+    func GetAppoinmentsForDate(pDtDate: NSDate, pIntIdProfessional: Int, pIntHourIni: Int,
+            pIntMinuteIni: Int, pIntHourEnd: Int, pIntMinuteEnd: Int,
+            pIntCompanyBranch: Int) -> Array<Appoinment> {
+            
+        var myArray = Array<Appoinment>()
+        var myAppoinment = Appoinment()
+        
+        // TODO: Leer de la base de datos y por cada cita encontrada insertar un objeto
+        
+        myAppoinment = Appoinment(pDtDate: pDtDate, pIntHourIni: 8,
+            pIntMinuteIni: 0, pIntHourEnd: 8, pIntMinuteEnd: 30,
+            pIntIdProfessional: pIntIdProfessional, pIntCompanyBranch: pIntCompanyBranch)
+                
+        myArray.append(myAppoinment)
+                
+        myAppoinment = Appoinment(pDtDate: pDtDate, pIntHourIni: 10,
+            pIntMinuteIni: 30, pIntHourEnd: 11, pIntMinuteEnd: 00,
+            pIntIdProfessional: pIntIdProfessional, pIntCompanyBranch: pIntCompanyBranch)
+            
+        myArray.append(myAppoinment)
+        
+        return myArray
+    }
+    
+    // Devuelve la hora de apertura y la de cierre del establecimiento
+    func GetSchedule(inout pIntHourIni: Int, inout pIntMinuteIni: Int, inout pIntHourEnd: Int,
+            inout pIntMinuteEnd: Int) {
+                
+        // TODO: Obtiene de la base de datos el horario de la peluquería
+        pIntHourIni = 8
+        pIntMinuteIni = 0
+        pIntHourEnd = 21
+        pIntMinuteEnd = 0
+    }
 }

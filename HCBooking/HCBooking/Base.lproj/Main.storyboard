@@ -191,6 +191,9 @@
                                     <!--2015-02-19 21:51:03 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="es"/>
+                                <connections>
+                                    <action selector="UIDatePicker_Change:" destination="K3q-rO-c2W" eventType="valueChanged" id="XC7-dU-Ie0"/>
+                                </connections>
                             </datePicker>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWR-zb-ubK">
                                 <rect key="frame" x="16" y="251" width="568" height="341"/>

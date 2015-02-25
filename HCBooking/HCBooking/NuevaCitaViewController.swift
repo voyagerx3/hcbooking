@@ -20,8 +20,22 @@ class NuevaCitaViewController: UIViewController {
         
         dtDate = GetExcactCurrentDate(dtDate)
         datPickDateAppoinment.date = dtDate
+        
+        UIDatePicker_Change(datPickDateAppoinment)
     }
 
+    // Se ejecuta al cambiar el valor del selector de fecha
+    @IBAction func UIDatePicker_Change(sender: AnyObject) {
+        // Obtengo las citas para la fecha seleccionada
+        let dateFormatter = NSDateFormatter()
+        let theDateFormat = NSDateFormatterStyle.ShortStyle
+        let theTimeFormat = NSDateFormatterStyle.ShortStyle
+        let calendar = NSCalendar.currentCalendar()
+        
+        dateFormatter.dateStyle = theDateFormat
+        dateFormatter.timeStyle = theTimeFormat
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,12 +48,69 @@ class NuevaCitaViewController: UIViewController {
         let theDateFormat = NSDateFormatterStyle.ShortStyle
         let theTimeFormat = NSDateFormatterStyle.ShortStyle
         var strDate = String()
+        var dtFinalDate = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        var intHourEnd, intMinuteEnd: Int
         
+        // Obtengo la fecha seleccionada de esta forma para que no me de una hora menos
         dateFormatter.dateStyle = theDateFormat
         dateFormatter.timeStyle = theTimeFormat
         
         strDate = dateFormatter.stringFromDate(datPickDateAppoinment.date)
-        println("\(strDate)")
+        dtFinalDate = dateFormatter.dateFromString(strDate)!
+
+        // Obtengo los componentes de la fecha seleccionada para saber la hora fin
+        let components = calendar.components(.CalendarUnitYear | .CalendarUnitMonth |
+            .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute,
+            fromDate: dtFinalDate)
+        
+        if components.minute == datPickDateAppoinment.minuteInterval {
+            intMinuteEnd = 00
+            intHourEnd = components.hour + 1
+        }
+        else {
+            intMinuteEnd = datPickDateAppoinment.minuteInterval
+            intHourEnd = components.hour
+        }
+        
+       // TODO: Falta saber el profesional y la compañía
+        myAppoinment = Appoinment(pDtDate: dtFinalDate, pIntHourIni: components.hour,
+            pIntMinuteIni: components.minute, pIntHourEnd: intHourEnd,
+            pIntMinuteEnd: intMinuteEnd, pIntIdProfessional: 0, pIntCompanyBranch: 0)
+        
+        if myAppoinment.FreeSpace(dtFinalDate, pIntIdProfessional: 0, pIntCompanyBranch: 0,
+            pIntHourIni: components.hour, pIntMinuteIni: components.minute,
+            pIntHourEnd: intHourEnd, pIntMinuteEnd: intMinuteEnd) {
+            
+        
+                if myAppoinment.InsertAppoinmetDDBB() {
+                    let myPopup = UIAlertController(title: "Cita creada",
+                        message: "La cita se ha creado correctamente",
+                        preferredStyle: UIAlertControllerStyle.Alert)
+                    
+                    myPopup.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default, handler: nil))
+                    
+                    self.presentViewController(myPopup, animated: true, completion: nil)
+                    
+                    // TODO: Actualizar tabla que muestra las citas
+                }
+                else {
+                    let myPopup = UIAlertController(title: "Error",
+                        message: "Ha ocurrido un error al crear la cita",
+                        preferredStyle: UIAlertControllerStyle.Alert)
+                    
+                    myPopup.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(myPopup, animated: true, completion: nil)
+                }
+        }
+        else {
+            let myPopup = UIAlertController(title: "Hora ocupada",
+                message: "No puede crear la cita porque la hora seleccionada ya está en uso",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            
+            myPopup.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(myPopup, animated: true, completion: nil)
+        }
     }
  
     
