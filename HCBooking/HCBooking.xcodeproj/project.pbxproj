@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C13973F1AA658A300B25534 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C13973E1AA658A300B25534 /* FacebookSDK.framework */; };
 		0CA7E5C21A8CF9E100381307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7E5C11A8CF9E100381307 /* AppDelegate.swift */; };
 		0CA7E5C51A8CF9E100381307 /* HCBooking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7E5C31A8CF9E100381307 /* HCBooking.xcdatamodeld */; };
 		0CA7E5C71A8CF9E100381307 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7E5C61A8CF9E100381307 /* ViewController.swift */; };
@@ -15,7 +16,6 @@
 		0CA7E5CF1A8CF9E100381307 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA7E5CD1A8CF9E100381307 /* LaunchScreen.xib */; };
 		0CA7E5DB1A8CF9E100381307 /* HCBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7E5DA1A8CF9E100381307 /* HCBookingTests.swift */; };
 		0CA7E5E51A8CFB3B00381307 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA7E5E41A8CFB3B00381307 /* MapKit.framework */; };
-		0CA7E5E71A8CFC9200381307 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA7E5E61A8CFC9200381307 /* FacebookSDK.framework */; };
 		0CEA52261A92943700DC6F9B /* VCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA52251A92943700DC6F9B /* VCMenu.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C13973D1AA6525100B25534 /* Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
+		0C13973E1AA658A300B25534 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = HCBooking/FacebookSDK.framework; sourceTree = "<group>"; };
 		0CA7E5BC1A8CF9E100381307 /* HCBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA7E5C01A8CF9E100381307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CA7E5C11A8CF9E100381307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +44,6 @@
 		0CA7E5D91A8CF9E100381307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CA7E5DA1A8CF9E100381307 /* HCBookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCBookingTests.swift; sourceTree = "<group>"; };
 		0CA7E5E41A8CFB3B00381307 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		0CA7E5E61A8CFC9200381307 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		0CEA52251A92943700DC6F9B /* VCMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CA7E5E71A8CFC9200381307 /* FacebookSDK.framework in Frameworks */,
+				0C13973F1AA658A300B25534 /* FacebookSDK.framework in Frameworks */,
 				0CA7E5E51A8CFB3B00381307 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA7E5C11A8CF9E100381307 /* AppDelegate.swift */,
+				0C13973D1AA6525100B25534 /* Bridge-Header.h */,
 				0CA7E5C61A8CF9E100381307 /* ViewController.swift */,
 				0CA7E5C81A8CF9E100381307 /* Main.storyboard */,
 				0CEA52251A92943700DC6F9B /* VCMenu.swift */,
@@ -128,7 +130,7 @@
 		0CA7E5E81A8CFCBD00381307 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				0CA7E5E61A8CFC9200381307 /* FacebookSDK.framework */,
+				0C13973E1AA658A300B25534 /* FacebookSDK.framework */,
 				0CA7E5E41A8CFB3B00381307 /* MapKit.framework */,
 			);
 			name = Framework;
@@ -370,10 +372,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/geovannyinca/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/HCBooking",
 				);
 				INFOPLIST_FILE = HCBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HCBooking/Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -384,10 +388,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/geovannyinca/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/HCBooking",
 				);
 				INFOPLIST_FILE = HCBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HCBooking/Bridge-Header.h";
 			};
 			name = Release;
 		};
