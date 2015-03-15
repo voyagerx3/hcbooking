@@ -16,9 +16,10 @@
 		0CA7E5DB1A8CF9E100381307 /* HCBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7E5DA1A8CF9E100381307 /* HCBookingTests.swift */; };
 		0CA7E5E51A8CFB3B00381307 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA7E5E41A8CFB3B00381307 /* MapKit.framework */; };
 		0CEA52261A92943700DC6F9B /* VCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA52251A92943700DC6F9B /* VCMenu.swift */; };
+		3278DFFD1AA334E6007A1214 /* SeleccionDiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278DFFC1AA334E6007A1214 /* SeleccionDiaViewController.swift */; };
 		3284637F1A9775B0003968A1 /* Appoinment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284637E1A9775B0003968A1 /* Appoinment.swift */; };
 		32B586E11A98EBF100B6D340 /* FuncionesFran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B586E01A98EBF100B6D340 /* FuncionesFran.swift */; };
-		32DBC9FB1A96297300D958DA /* NuevaCitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DBC9FA1A96297300D958DA /* NuevaCitaViewController.swift */; };
+		32F5E4891A9F6B3C003F4926 /* NuevaCitaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F5E4881A9F6B3C003F4926 /* NuevaCitaTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +47,10 @@
 		0CA7E5E41A8CFB3B00381307 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0CA7E5E61A8CFC9200381307 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		0CEA52251A92943700DC6F9B /* VCMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMenu.swift; sourceTree = "<group>"; };
+		3278DFFC1AA334E6007A1214 /* SeleccionDiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionDiaViewController.swift; sourceTree = "<group>"; };
 		3284637E1A9775B0003968A1 /* Appoinment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appoinment.swift; sourceTree = "<group>"; };
 		32B586E01A98EBF100B6D340 /* FuncionesFran.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncionesFran.swift; sourceTree = "<group>"; };
-		32DBC9FA1A96297300D958DA /* NuevaCitaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaCitaViewController.swift; sourceTree = "<group>"; };
+		32F5E4881A9F6B3C003F4926 /* NuevaCitaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaCitaTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +102,10 @@
 				0CA7E5CD1A8CF9E100381307 /* LaunchScreen.xib */,
 				0CA7E5C31A8CF9E100381307 /* HCBooking.xcdatamodeld */,
 				0CA7E5BF1A8CF9E100381307 /* Supporting Files */,
-				32DBC9FA1A96297300D958DA /* NuevaCitaViewController.swift */,
+				32F5E4881A9F6B3C003F4926 /* NuevaCitaTableViewController.swift */,
 				3284637E1A9775B0003968A1 /* Appoinment.swift */,
 				32B586E01A98EBF100B6D340 /* FuncionesFran.swift */,
+				3278DFFC1AA334E6007A1214 /* SeleccionDiaViewController.swift */,
 			);
 			path = HCBooking;
 			sourceTree = "<group>";
@@ -248,10 +251,11 @@
 			files = (
 				3284637F1A9775B0003968A1 /* Appoinment.swift in Sources */,
 				0CA7E5C71A8CF9E100381307 /* ViewController.swift in Sources */,
+				3278DFFD1AA334E6007A1214 /* SeleccionDiaViewController.swift in Sources */,
 				0CEA52261A92943700DC6F9B /* VCMenu.swift in Sources */,
 				0CA7E5C51A8CF9E100381307 /* HCBooking.xcdatamodeld in Sources */,
+				32F5E4891A9F6B3C003F4926 /* NuevaCitaTableViewController.swift in Sources */,
 				32B586E11A98EBF100B6D340 /* FuncionesFran.swift in Sources */,
-				32DBC9FB1A96297300D958DA /* NuevaCitaViewController.swift in Sources */,
 				0CA7E5C21A8CF9E100381307 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

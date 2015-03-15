@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -116,7 +116,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="k8f-zg-h8s" kind="show" identifier="showNuevaCitaViewController" id="UrL-Ed-qwS"/>
+                                            <segue destination="0I8-tp-2zE" kind="show" identifier="gotoSelecionDiaFromMenu" id="uh4-rt-6ys"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCS-kJ-Ozm">
@@ -173,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="1057" y="566"/>
         </scene>
-        <!--Nueva cita-->
+        <!--Elegir día-->
         <scene sceneID="73q-VF-bml">
             <objects>
-                <viewController id="K3q-rO-c2W" customClass="NuevaCitaViewController" customModule="HCBooking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="K3q-rO-c2W" customClass="SeleccionDiaViewController" customModule="HCBooking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n8Z-j8-uJP"/>
                         <viewControllerLayoutGuide type="bottom" id="QPf-Tm-eGf"/>
@@ -185,24 +185,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Xt-Ah-SEz">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Xt-Ah-SEz">
                                 <rect key="frame" x="16" y="81" width="320" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="446075463.95612597">
                                     <!--2015-02-19 21:51:03 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="es"/>
-                                <connections>
-                                    <action selector="UIDatePicker_Change:" destination="K3q-rO-c2W" eventType="valueChanged" id="XC7-dU-Ie0"/>
-                                </connections>
                             </datePicker>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWR-zb-ubK">
                                 <rect key="frame" x="16" y="251" width="568" height="341"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-hs-U2H">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-hs-U2H">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="341"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableView>
                                 </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="ceI-hs-U2H"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0h-QD-2Te">
                                 <rect key="frame" x="16" y="251" width="320" height="329"/>
@@ -238,31 +240,84 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="YWR-zb-ubK"/>
                                 <exclude reference="Y0h-QD-2Te"/>
                                 <exclude reference="ugl-Bc-iuX"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="1UM-ay-Fgk"/>
                                 <exclude reference="iet-Po-c5q"/>
                                 <exclude reference="AVn-Hm-y7V"/>
                                 <exclude reference="FWx-aW-oyP"/>
                                 <exclude reference="lPE-Z7-jyO"/>
+                                <exclude reference="1aG-T3-Nez"/>
+                                <exclude reference="ZZg-U8-Jqd"/>
+                                <exclude reference="opH-6I-wi4"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Nueva cita" id="91p-0E-ADi">
+                    <navigationItem key="navigationItem" title="Elegir día" id="91p-0E-ADi">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="h9B-Lm-QqG">
                             <connections>
-                                <action selector="BT_Done_Click:" destination="K3q-rO-c2W" id="zgF-pZ-xbJ"/>
+                                <segue destination="YPd-NJ-dVJ" kind="show" identifier="gotoListaCitasFromSeleccionDia" id="KYw-5R-mzW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="datPickDateAppoinment" destination="9Xt-Ah-SEz" id="oq0-y3-u1J"/>
+                        <outlet property="dtPicDate" destination="9Xt-Ah-SEz" id="TGe-gN-EgT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxQ-rZ-nkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="1658"/>
+            <point key="canvasLocation" x="1484" y="1296"/>
+        </scene>
+        <!--Citas-->
+        <scene sceneID="Ccb-9a-wLR">
+            <objects>
+                <tableViewController id="YPd-NJ-dVJ" customClass="NuevaCitaTableViewController" customModule="HCBooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jrS-96-Dpx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Citas" textLabel="ZI3-iv-0qo" detailTextLabel="CJ8-Do-kMg" style="IBUITableViewCellStyleSubtitle" id="mwX-Yn-Nn4">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mwX-Yn-Nn4" id="8nd-Do-2et">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZI3-iv-0qo">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CJ8-Do-kMg">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="ZI3-iv-0qo"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YPd-NJ-dVJ" id="bM9-I4-aHp"/>
+                            <outlet property="delegate" destination="YPd-NJ-dVJ" id="cgp-qw-t6l"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Citas" id="B5F-Fa-jZy"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEP-s8-56q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="2066"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tN2-po-ieo">
@@ -283,22 +338,22 @@
             <point key="canvasLocation" x="277" y="310"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="rYX-Sz-JWl">
+        <scene sceneID="Ico-XA-oWd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k8f-zg-h8s" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0I8-tp-2zE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9LY-Na-lnT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J3t-dp-DXW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="K3q-rO-c2W" kind="relationship" relationship="rootViewController" id="eeF-6n-NIq"/>
+                        <segue destination="K3q-rO-c2W" kind="relationship" relationship="rootViewController" id="BxJ-70-tEg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mbS-kr-YDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sx4-bM-OyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-86" y="1446"/>
+            <point key="canvasLocation" x="672" y="1296"/>
         </scene>
     </scenes>
 </document>

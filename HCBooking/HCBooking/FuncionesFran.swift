@@ -32,3 +32,23 @@ func GetExcactCurrentDate(pDate: NSDate) -> NSDate {
     
     return dtNewDate
 }
+
+// Obtiene los componentes de una fecha
+func GetDateComponents(pDtDate: NSDate) -> NSDateComponents {
+    let calendar = NSCalendar.currentCalendar()
+    let components = calendar.components(.CalendarUnitYear | .CalendarUnitMonth |
+        .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute,
+        fromDate: pDtDate)
+    
+    return components
+}
+
+// Suma intervalos de tiempo a una fecha
+func SumDateIntervals(pDtInicial: NSDate, pCalUnit: NSCalendarUnit, pIntInterval: Int) -> NSDate {
+    var dtEnd = NSDate()
+    let calendar = NSCalendar.currentCalendar()
+    
+    dtEnd = calendar.dateByAddingUnit(pCalUnit, value: pIntInterval, toDate: pDtInicial, options: nil)!
+    
+    return dtEnd
+}
