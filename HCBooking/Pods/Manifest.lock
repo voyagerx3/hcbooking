@@ -1,0 +1,16 @@
+PODS:
+  - Locksmith (1.2.0)
+  - Persei (1.0)
+  - SSKeychain (1.2.2)
+
+DEPENDENCIES:
+  - Locksmith
+  - Persei
+  - SSKeychain
+
+SPEC CHECKSUMS:
+  Locksmith: 15a873e266beceb1b81476e0f50a1e1cba103a6f
+  Persei: d0fd1c8c7e69e450dd5649a0e00ac76a69b705e0
+  SSKeychain: cc48bd3ad24fcd9125adb9e0d23dd50b8bbd08b9
+
+COCOAPODS: 0.36.0

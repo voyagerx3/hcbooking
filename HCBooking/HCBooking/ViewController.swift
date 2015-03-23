@@ -20,6 +20,17 @@ class ViewController: UIViewController, FBLoginViewDelegate  {
     @IBOutlet weak var LblError: UILabel!
     
     
+    @IBAction func logInActionbutton(sender: AnyObject) {
+        if TxtEmail.text != "" && TxtPassword.text != "" {
+            // Not Empty, Do something.
+        } else {
+            // Empty, Notify user
+            self.LblError.text = "All Fields Required"
+        }
+        
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

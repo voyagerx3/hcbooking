@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Persei
 
 class VCMenu: UIViewController{
     //

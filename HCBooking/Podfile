@@ -1,0 +1,20 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'HCBooking' do
+#pod 'LCAnimatedMenu'
+#pod 'AFNetworking'
+#pod 'ENSwiftSideMenu'
+#pod 'ObjectiveSugar'
+#pod 'YALSideMenu'
+#pod 'SVProgressHUD'
+pod 'SSKeychain'
+pod 'Locksmith'
+pod 'Persei'
+use_frameworks!
+end
+
+target 'HCBookingTests' do
+
+end
+
