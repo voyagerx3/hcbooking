@@ -13,6 +13,9 @@
 		0CE583B71AC0036300DCD763 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE583B61AC0036300DCD763 /* Images.xcassets */; };
 		0CE583BA1AC0036300DCD763 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE583B81AC0036300DCD763 /* LaunchScreen.xib */; };
 		0CE583C61AC0036300DCD763 /* hcbookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE583C51AC0036300DCD763 /* hcbookingTests.swift */; };
+		0CE583D01AC006EF00DCD763 /* VCLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE583CF1AC006EF00DCD763 /* VCLogin.swift */; };
+		0CE583D21AC0184100DCD763 /* VCAltaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE583D11AC0184100DCD763 /* VCAltaUser.swift */; };
+		0CE583D41AC01B5800DCD763 /* VCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE583D31AC01B5800DCD763 /* VCMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		0CE583BF1AC0036300DCD763 /* hcbookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hcbookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE583C41AC0036300DCD763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CE583C51AC0036300DCD763 /* hcbookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hcbookingTests.swift; sourceTree = "<group>"; };
+		0CE583CF1AC006EF00DCD763 /* VCLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCLogin.swift; sourceTree = "<group>"; };
+		0CE583D11AC0184100DCD763 /* VCAltaUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCAltaUser.swift; sourceTree = "<group>"; };
+		0CE583D31AC01B5800DCD763 /* VCMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,9 @@
 				0CE583AF1AC0036300DCD763 /* AppDelegate.swift */,
 				0CE583B11AC0036300DCD763 /* ViewController.swift */,
 				0CE583B31AC0036300DCD763 /* Main.storyboard */,
+				0CE583D31AC01B5800DCD763 /* VCMenu.swift */,
+				0CE583D11AC0184100DCD763 /* VCAltaUser.swift */,
+				0CE583CF1AC006EF00DCD763 /* VCLogin.swift */,
 				0CE583B61AC0036300DCD763 /* Images.xcassets */,
 				0CE583B81AC0036300DCD763 /* LaunchScreen.xib */,
 				0CE583AD1AC0036300DCD763 /* Supporting Files */,
@@ -213,6 +222,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CE583B21AC0036300DCD763 /* ViewController.swift in Sources */,
+				0CE583D21AC0184100DCD763 /* VCAltaUser.swift in Sources */,
+				0CE583D01AC006EF00DCD763 /* VCLogin.swift in Sources */,
+				0CE583D41AC01B5800DCD763 /* VCMenu.swift in Sources */,
 				0CE583B01AC0036300DCD763 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
