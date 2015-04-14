@@ -52,3 +52,18 @@ func SumDateIntervals(pDtInicial: NSDate, pCalUnit: NSCalendarUnit, pIntInterval
     
     return dtEnd
 }
+
+// Convierte una fecha en string
+func ConvertDateToString(pDtDate: NSDate) -> String{
+    let dateFormatter = NSDateFormatter()
+    let theDateFormat = NSDateFormatterStyle.ShortStyle
+    let theTimeFormat = NSDateFormatterStyle.ShortStyle
+    var strDate = String()
+    
+    dateFormatter.dateStyle = theDateFormat
+    dateFormatter.timeStyle = theTimeFormat
+    
+    strDate = dateFormatter.stringFromDate(pDtDate)
+    
+    return strDate
+}

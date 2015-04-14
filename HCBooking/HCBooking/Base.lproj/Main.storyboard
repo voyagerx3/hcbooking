@@ -304,6 +304,9 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SPX-lY-E03" kind="show" identifier="gotoNuevaCitaFromListado" id="5bj-Gd-Kqf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -318,6 +321,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEP-s8-56q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1343" y="2066"/>
+        </scene>
+        <!--Nueva cita-->
+        <scene sceneID="7s2-sS-tfo">
+            <objects>
+                <viewController id="SPX-lY-E03" customClass="NuevaCitaViewController" customModule="HCBooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XBK-pJ-e8P"/>
+                        <viewControllerLayoutGuide type="bottom" id="iJK-RX-4Or"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eCK-np-cMj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fdf-zA-TWi">
+                                <rect key="frame" x="0.0" y="64" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="y3L-Sq-mRs"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="448210281.71114498">
+                                    <!--2015-03-16 14:51:21 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fdf-zA-TWi" firstAttribute="top" secondItem="XBK-pJ-e8P" secondAttribute="bottom" id="XYH-fG-XC6"/>
+                            <constraint firstAttribute="centerX" secondItem="fdf-zA-TWi" secondAttribute="centerX" id="sQL-6e-bSL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nueva cita" id="Ajh-nB-5lY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tZY-mk-H2S"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="uiDtPicker" destination="fdf-zA-TWi" id="e6s-3O-X6V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAv-hu-YzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2207" y="2170"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tN2-po-ieo">

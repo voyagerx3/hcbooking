@@ -121,7 +121,7 @@ class Appoinment {
                 myAppoinment = Appoinment(pDtDate: pDtDate, pIntHourIni: 8,
                     pIntMinuteIni: 0, pIntHourEnd: 8, pIntMinuteEnd: 30,
                     pIntIdProfessional: pIntIdProfessional, pIntCompanyBranch: pIntCompanyBranch,
-                    pStrUserName: "Paco")
+                    pStrUserName: "Ocupado")
             }
             else if (dtcOpeningHour.hour == 11) && (dtcOpeningHour.minute == 30) {
                 myAppoinment = Appoinment(pDtDate: pDtDate, pIntHourIni: 11,

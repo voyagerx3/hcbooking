@@ -1,21 +1,27 @@
 //
-//  SeleccionDiaViewController.swift
+//  NuevaCitaViewController.swift
 //  HCBooking
 //
-//  Created by Francisco Asensi Benito on 1/3/15.
+//  Created by Francisco Asensi Benito on 16/3/15.
 //  Copyright (c) 2015 HCBooking. All rights reserved.
 //
 
 import UIKit
 
-class SeleccionDiaViewController: UIViewController {
-
-    @IBOutlet weak var dtPicDate: UIDatePicker!
+class NuevaCitaViewController: UIViewController {
+    var myAppoinment = Appoinment()
+    @IBOutlet weak var uiDtPicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        println(myAppoinment.intHourIni)
+        println(myAppoinment.intMinuteIni)
+        // TODO: Crear componentes de fecha y asignarla al datepicker
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,13 +30,14 @@ class SeleccionDiaViewController: UIViewController {
     }
     
 
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "gotoListaCitasFromSeleccionDia" {
-            let vc = segue.destinationViewController as! NuevaCitaTableViewController
-            vc.dtDate = dtPicDate.date
-        }
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
+    */
+
 }

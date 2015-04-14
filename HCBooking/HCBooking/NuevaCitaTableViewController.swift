@@ -51,8 +51,6 @@ class NuevaCitaTableViewController: UITableViewController {
         myAppoinmentArray = myAppoinment.GetAppoinmentsForDate(pDtDate,
             pIntIdProfessional: 0, pIntOpeningHour: intHourIni, pIntOpeningMinute: intMInuteIni,
             pIntClosingHour: intHourEnd, pIntClosingMinute: intMinuteEnd, pIntCompanyBranch: 0)
-        
-        // Muestro las citas del día
     }
 
     // MARK: - Table view data source
@@ -71,11 +69,11 @@ class NuevaCitaTableViewController: UITableViewController {
         let appoin = myAppoinmentArray[indexPath.row]
         var strMinuteIni: String = String(appoin.intMinuteIni)
         
-        if countElements(strMinuteIni) == 1 {
+        if count(strMinuteIni) == 1 {
             strMinuteIni += "0"
         }
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Citas", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Citas", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel?.text = appoin.strUserName
         cell.detailTextLabel?.text = String(appoin.intHourIni) + ":" + strMinuteIni
@@ -119,13 +117,38 @@ class NuevaCitaTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if identifier == "gotoNuevaCitaFromListado" {
+            var celda = sender as! UITableViewCell
+            var myAppoinment = Appoinment()
+
+            myAppoinment = myAppoinmentArray[celda.tag]
+            
+            if myAppoinment.strUserName == "" {
+                return true
+            }
+            else {
+                var alertView: UIAlertController = UIAlertController(title: "Ocupado", message: "El turno seleccionado está ocupado", preferredStyle: UIAlertControllerStyle.Alert)
+                alertView.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alertView, animated: true, completion: nil)
+                
+                return false
+            }
+        }
+        else {
+            return false
+        }
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "gotoNuevaCitaFromListado" {
+            let vc = segue.destinationViewController as! NuevaCitaViewController
+            var celda = sender as! UITableViewCell
+            
+            vc.myAppoinment = myAppoinmentArray[celda.tag]
+        }
     }
-    */
 }
